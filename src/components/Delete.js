@@ -5,6 +5,12 @@ function Delete({prop}) {
         fetch(`http://localhost:4000/questions/${prop}`,{
             method:"DELETE"
         })
+        .then((res)=>res.json())
+        .then(() => {
+            
+            window.location.reload();
+          })
+
     }
   return (
     <div>
